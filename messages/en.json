@@ -1,0 +1,15 @@
+{
+  "Common": {
+    "searchPlaceholder": "Search shops, categories...",
+    "language": "Language",
+    "theme": "Toggle Theme",
+    "categories": "Categories",
+    "all": "All",
+    "floor": "Floor",
+    "hours": "Operating Hours"
+  },
+  "Navigation": {
+    "getDirections": "Get Directions",
+    "visitWebsite": "Visit Website"
+  }
+}
