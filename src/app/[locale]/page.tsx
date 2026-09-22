@@ -27,7 +27,7 @@ export default function Home() {
   const categories = ["All", ...Array.from(new Set(mockShops.map(shop => shop.category)))];
 
   return (
-    <div className="container mx-auto px-4 py-8 max-w-7xl">
+    <div className="container mx-auto px-4 pt-28 pb-8 max-w-7xl">
       <FadeIn className="mb-8 space-y-6">
         <div className="relative max-w-2xl mx-auto">
           <div className="absolute inset-y-0 left-4 flex items-center pointer-events-none">

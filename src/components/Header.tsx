@@ -38,7 +38,6 @@ export function Header() {
       </div>
       </LiquidGlass>
     </div>
-    <div className="h-24 w-full" />
     </>
   );
 }

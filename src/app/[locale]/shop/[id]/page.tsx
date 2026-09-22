@@ -25,7 +25,7 @@ export default async function ShopDetails(props: { params: Promise<{ id: string 
   return (
     <PageTransition className="pb-20">
       {/* Signature Element: Cinematic Hero */}
-      <div className="relative w-full h-[60vh] md:h-[70vh] flex items-end">
+      <div className="relative w-full min-h-[60vh] md:min-h-[70vh] flex flex-col justify-end pt-28 pb-20">
         <div className="absolute inset-0 z-0">
           <ImageLoader 
             src={shop.heroImageUrl} 
@@ -37,9 +37,9 @@ export default async function ShopDetails(props: { params: Promise<{ id: string 
           <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent" />
         </div>
 
-        <div className="container mx-auto px-4 z-10 relative pb-10 w-full max-w-5xl">
+        <div className="container mx-auto px-4 z-10 relative w-full max-w-5xl">
           <Link href="/">
-            <Button variant="ghost" size="icon" className="mb-6 rounded-full bg-background/20 backdrop-blur-md hover:bg-background/40">
+            <Button variant="ghost" size="icon" className="mb-6 rounded-full bg-background/20 backdrop-blur-md hover:bg-background/40 border border-border/20 shadow-sm">
               <ArrowLeft className="w-5 h-5 text-foreground" />
             </Button>
           </Link>
