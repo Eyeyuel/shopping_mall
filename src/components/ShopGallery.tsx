@@ -19,14 +19,14 @@ export function ShopGallery({ gallery, shopName, heroImageUrl }: { gallery: Medi
 
   if (!gallery || gallery.length === 0) return null;
 
-  const slides = gallery.map(media => {
+  const slides: any[] = gallery.map(media => {
     if (media.type === 'video') {
       return {
-        type: "youtube" as const,
+        type: "youtube",
         videoId: media.url
       };
     }
-    return { src: media.url, alt: shopName };
+    return { type: "image", src: media.url, alt: shopName };
   });
 
   const handleOpen = (mediaIndex: number) => {
@@ -91,8 +91,8 @@ export function ShopGallery({ gallery, shopName, heroImageUrl }: { gallery: Medi
         animation={{ fade: 250 }}
         controller={{ closeOnBackdropClick: true }}
         render={{
-          slide: ({ slide }) => {
-            if (slide.type === "youtube" && 'videoId' in slide) {
+          slide: ({ slide }: { slide: any }) => {
+            if (slide.type === "youtube" && slide.videoId) {
               return (
                 <div className="w-full h-full relative pointer-events-auto bg-black">
                   <iframe 
