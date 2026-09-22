@@ -21,6 +21,7 @@ export default async function ShopDetails(props: { params: Promise<{ id: string 
   }
 
   const t = await getTranslations("Common");
+  const tShop = await getTranslations("Shops");
 
   return (
     <PageTransition className="pb-20">
@@ -56,7 +57,7 @@ export default async function ShopDetails(props: { params: Promise<{ id: string 
             <div className="flex-1 z-20">
               <div className="flex flex-wrap gap-2 mb-3">
                 <Badge variant="secondary" className="bg-primary/20 text-primary backdrop-blur-md border-none text-sm">
-                  {shop.category}
+                  {t(shop.category)}
                 </Badge>
                 {shop.tags.map(tag => (
                   <Badge key={tag} variant="outline" className="backdrop-blur-md border-foreground/20 text-foreground/90">
@@ -65,7 +66,7 @@ export default async function ShopDetails(props: { params: Promise<{ id: string 
                 ))}
               </div>
               <h1 className="text-4xl md:text-6xl font-bold font-heading tracking-tight mb-2 drop-shadow-lg text-foreground">
-                {shop.name}
+                {tShop(`${shop.id}.name`)}
               </h1>
             </div>
             
@@ -96,13 +97,13 @@ export default async function ShopDetails(props: { params: Promise<{ id: string 
         <FadeIn delay={0.4}>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             <div className="md:col-span-2 space-y-6">
-              <h2 className="text-3xl font-bold font-heading">About {shop.name}</h2>
+              <h2 className="text-3xl font-bold font-heading">{t("about")} {tShop(`${shop.id}.name`)}</h2>
               <div className="prose prose-lg dark:prose-invert">
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  {shop.description}
+                  {tShop(`${shop.id}.description`)}
                 </p>
                 <p className="text-muted-foreground mt-4">
-                  Visit us at <strong>{shop.shopNumber}</strong> on <strong>{shop.floor}</strong> to explore our full range of offerings. We are open during regular mall hours, providing a premium shopping experience tailored to you.
+                  {t("visitUs")} <strong>{shop.shopNumber}</strong> {t("floor")} <strong>{shop.floor}</strong>
                 </p>
               </div>
             </div>
@@ -123,8 +124,8 @@ export default async function ShopDetails(props: { params: Promise<{ id: string 
         {/* Media Gallery Section */}
         {shop.gallery && shop.gallery.length > 0 && (
           <FadeIn delay={0.6}>
-            <h2 className="text-3xl font-bold font-heading mb-4">Gallery</h2>
-            <ShopGallery gallery={shop.gallery} shopName={shop.name} heroImageUrl={shop.heroImageUrl} />
+            <h2 className="text-3xl font-bold font-heading mb-4">{t("gallery")}</h2>
+            <ShopGallery gallery={shop.gallery} shopName={tShop(`${shop.id}.name`)} heroImageUrl={shop.heroImageUrl} />
           </FadeIn>
         )}
       </div>

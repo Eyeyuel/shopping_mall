@@ -7,8 +7,11 @@ import { MapPin } from "lucide-react";
 import { motion } from "framer-motion";
 import { Link } from "../i18n/routing";
 import { ImageLoader } from "./ImageLoader";
+import { useTranslations } from "next-intl";
 
 export function ShopCard({ shop, priority = false }: { shop: Shop, priority?: boolean }) {
+  const t = useTranslations("Common");
+  const tShop = useTranslations("Shops");
   return (
     <Link href={`/shop/${shop.id}`}>
       <motion.div whileHover={{ y: -5 }} transition={{ type: "spring", stiffness: 300, damping: 20 }}>
@@ -35,17 +38,17 @@ export function ShopCard({ shop, priority = false }: { shop: Shop, priority?: bo
           </div>
           <CardContent className="p-5">
             <div className="flex justify-between items-start mb-2">
-              <h3 className="text-lg font-bold font-heading">{shop.name}</h3>
+              <h3 className="text-lg font-bold font-heading">{tShop(`${shop.id}.name`)}</h3>
               <Badge variant="secondary" className="bg-primary/10 text-primary hover:bg-primary/20">
-                {shop.category}
+                {t(shop.category)}
               </Badge>
             </div>
             <p className="text-sm text-muted-foreground line-clamp-2 mb-4">
-              {shop.description}
+              {tShop(`${shop.id}.description`)}
             </p>
             <div className="flex items-center text-xs text-muted-foreground font-medium">
               <MapPin className="w-3.5 h-3.5 mr-1 text-primary/70" />
-              {shop.floor}
+              {t("floor")} {shop.floor}
             </div>
           </CardContent>
         </Card>

@@ -8,6 +8,7 @@ import { StaggerGrid, StaggerItem } from "@/components/animations/StaggerGrid";
 import { FadeIn } from "@/components/animations/FadeIn";
 import { Input } from "@/components/ui/input";
 import { Search } from "lucide-react";
+import { LiquidGlass } from "@/components/LiquidGlassClient";
 import { useTranslations } from "next-intl";
 import { Skeleton } from "@/components/ui/skeleton";
 import { ShopCardSkeleton } from "@/components/ShopCardSkeleton";
@@ -30,16 +31,21 @@ export default function Home() {
     <div className="container mx-auto px-4 pt-28 pb-8 max-w-7xl">
       <FadeIn className="mb-8 space-y-6">
         <div className="relative max-w-2xl mx-auto">
-          <div className="absolute inset-y-0 left-4 flex items-center pointer-events-none">
-            <Search className="h-5 w-5 text-muted-foreground" />
-          </div>
-          <Input 
-            type="text" 
-            placeholder={t("searchPlaceholder")}
-            className="w-full h-14 pl-12 pr-4 rounded-full bg-card/50 border-border/50 focus:bg-card glass-panel shadow-sm text-lg"
-            value={search}
-            onChange={(e) => setSearch(e.target.value)}
-          />
+          <LiquidGlass 
+            config={{ material: 'regular', chromaticAberration: 0.15 }}
+            className="rounded-full !shadow-none drop-shadow-none border border-white/20 dark:border-white/10 bg-card/20"
+          >
+            <div className="absolute inset-y-0 left-4 flex items-center pointer-events-none z-10">
+              <Search className="h-5 w-5 text-muted-foreground" />
+            </div>
+            <Input 
+              type="text" 
+              placeholder={t("searchPlaceholder")}
+              className="w-full h-14 pl-12 pr-4 rounded-full bg-transparent border-none focus-visible:ring-0 focus-visible:ring-offset-0 shadow-none text-lg relative z-10"
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+            />
+          </LiquidGlass>
         </div>
         
         <CategoryTabs 

@@ -4,12 +4,86 @@
     "language": "Language",
     "theme": "Toggle Theme",
     "categories": "Categories",
-    "all": "All",
+    "All": "All",
     "floor": "Floor",
-    "hours": "Operating Hours"
+    "hours": "Operating Hours",
+    "noResults": "No results found",
+    "Fashion": "Fashion",
+    "Electronics": "Electronics",
+    "Dining": "Dining",
+    "Entertainment": "Entertainment",
+    "Services": "Services",
+    "Beauty": "Beauty",
+    "Sporting Goods": "Sporting Goods",
+    "Home & Garden": "Home & Garden",
+    "about": "About",
+    "gallery": "Gallery",
+    "visitUs": "Visit us at"
   },
   "Navigation": {
     "getDirections": "Get Directions",
     "visitWebsite": "Visit Website"
+  },
+  "Shops": {
+    "shop-1": {
+      "name": "Aura Boutique",
+      "description": "Aura Boutique brings the latest European fashion trends straight to the runway of your daily life. Experience high-end luxury with our curated seasonal collections."
+    },
+    "shop-2": {
+      "name": "TechHaven",
+      "description": "Your ultimate destination for cutting-edge electronics, smart home devices, and premium audio equipment. Experience the future today."
+    },
+    "shop-3": {
+      "name": "The Obsidian Grill",
+      "description": "An unforgettable dining experience featuring dry-aged steaks, an award-winning wine list, and panoramic views of the city skyline."
+    },
+    "shop-4": {
+      "name": "Lumina Spa",
+      "description": "Rejuvenate your body and mind in our state-of-the-art wellness facility. Lumina Spa offers holistic treatments, hydrotherapy, and personalized care."
+    },
+    "shop-5": {
+      "name": "Apex Cinema",
+      "description": "Experience the magic of cinema in ultra-high definition. Featuring IMAX screens, Dolby Atmos sound, and premium reclining seats."
+    },
+    "shop-6": {
+      "name": "Velvet Caffe",
+      "description": "Artisanal coffee, freshly baked pastries, and a cozy atmosphere perfect for remote work or catching up with friends."
+    },
+    "shop-7": {
+      "name": "Nova Athletics",
+      "description": "Premium activewear and athletic footwear designed for performance and style. Push your limits with Nova."
+    },
+    "shop-8": {
+      "name": "Chrono Timepieces",
+      "description": "An exclusive collection of luxury watches from the world's most prestigious horological houses."
+    },
+    "shop-9": {
+      "name": "Echo Sound",
+      "description": "Audiophile-grade headphones, speakers, and turntables. Hear every detail exactly as the artist intended."
+    },
+    "shop-10": {
+      "name": "Zenith Virtual",
+      "description": "Step into another world at our cutting-edge Virtual Reality arcade. Multiplayer arenas, immersive escape rooms, and more."
+    },
+    "shop-11": {
+      "name": "The Floral Studio",
+      "description": "Bespoke floral arrangements for every occasion. Fresh, seasonal blooms crafted by master florists."
+    },
+    "shop-12": {
+      "name": "Maison de Parfum",
+      "description": "Discover signature scents and exclusive fragrances from master perfumers around the globe."
+    },
+    "shop-13": {
+      "name": "Byte & Bite",
+      "description": "A modern fusion restaurant offering tech-inspired dishes and robotic service in a cyberpunk atmosphere."
+    },
+    "shop-14": {
+      "name": "Pixel Play",
+      "description": "The ultimate destination for gamers. Consoles, PC hardware, retro games, and exclusive merchandise."
+    },
+    "shop-15": {
+      "name": "Luxe Optical",
+      "description": "Designer eyewear and comprehensive eye care. See the world clearly and in style."
+    }
   }
 }
